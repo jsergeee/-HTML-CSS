@@ -58,6 +58,7 @@ a {
 .carousel {
   position: relative;
   background-color: #F7F7F7;
+  z-index: 0;
 }
 
 .carousel-inner {
@@ -245,7 +246,7 @@ ul {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   padding-left: 30px;
   padding-right: 30px;
   margin: 0 auto;
@@ -264,42 +265,128 @@ ul {
   height: 148px;
   align-items: center;
   justify-content: space-between;
+  margin: 0 200px;
 }
-
-.top-head__heading {
+.top-head .top-head__heading {
   color: #F16D7F;
   font-family: "Lato", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
-  margin-left: 100px;
 }
-
-.bread_crumbs {
-  margin-right: 200px;
-}
-
-.bread_crambs__link {
+.top-head .bread_crambs__link {
   color: #636363;
   font-family: "Lato", serif;
   font-weight: 300px;
   font-style: normal;
   font-size: 16px;
 }
-
-.bread_crambs__link::after {
+.top-head .bread_crambs__link::after {
   content: "/";
   /* Добавляем разделитель */
   margin-left: 5px;
   /* Отступ слева от разделителя */
 }
-
-.bread_crambs__link_site {
+.top-head .bread_crambs__link_site {
   color: #F16D7F;
   font-family: "Lato", serif;
   font-weight: 700px;
   font-style: normal;
   font-size: 16px;
+}
+
+.Product_Description {
+  position: relative;
+  top: -40px;
+  height: 601px;
+  width: 1140px;
+  margin: 0 auto;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+.Product_Description .Product_Description__collection_name {
+  color: #F16D7F;
+  font-family: "Lato", serif;
+  font-weight: 700px;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 40px;
+}
+.Product_Description .clollection_name_separator {
+  width: 63px;
+  border: 1px solid #F16D7F;
+  margin: 20px auto;
+}
+.Product_Description .clollection_name_brend {
+  font-family: "Lato", serif;
+  font-weight: 700px;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #4D4D4D;
+}
+.Product_Description .collection_name_text {
+  margin: 20px auto;
+  text-align: center;
+  width: 555px;
+  font-family: "Lato", serif;
+  font-weight: 700px;
+  font-style: normal;
+  font-size: 16px;
+  color: #5E5E5E;
+}
+.Product_Description .clollection_name_prise {
+  color: #F16D7F;
+  text-align: center;
+  width: 555px;
+  font-family: "Lato", serif;
+  font-weight: 700px;
+  font-style: normal;
+  font-size: 16px;
+  margin: 20px auto;
+}
+.Product_Description .collection_name_horisont_line {
+  margin: 50px auto;
+  width: 641px;
+  border: 1px solid #EAEAEA;
+}
+.Product_Description .Product_Description_choice {
+  margin: auto;
+  text-align: center;
+}
+.Product_Description .choice {
+  display: inline-block;
+  font-family: "Lato", serif;
+  font-weight: 700px;
+  font-style: normal;
+  font-size: 16px;
+  color: #6F6E6E;
+  gap: 20px;
+}
+.Product_Description .choice::after {
+  content: "";
+  /* Создаем пустой контент для псевдоэлемента */
+  display: inline-block;
+  /* Делаем его блочным элементом */
+  width: 10px;
+  /* Ширина иконки */
+  height: 10px;
+  /* Высота иконки */
+  background-image: url(/icon/Vector.svg);
+  /* Укажите путь к вашей иконке */
+  background-size: contain;
+  /* Масштабируем иконку */
+  background-repeat: no-repeat;
+  /* Не повторяем иконку */
+  margin-left: 10px;
+  /* Отступ слева от иконки */
+  vertical-align: middle;
+}
+.Product_Description .Product_Description_add_to_cart {
+  margin: 50px auto;
+  text-align: center;
 }
 
 .header__container {
