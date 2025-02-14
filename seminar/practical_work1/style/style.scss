@@ -304,7 +304,7 @@ ul {
     height: 148px;
     align-items: center;
     justify-content: space-between;
-    margin: 0 200px;
+  
 
     .top-head__heading {
         color: $colorSelectSite;
@@ -312,13 +312,14 @@ ul {
         font-weight: 400;
         font-style: normal;
         font-size: 24px;
+        margin-left: 200px;
         
 
 
     }
 
     .bread_crumbs {
-        // margin-right: 200px;
+        margin-right: 200px;
     }
 
     .bread_crambs__link {

@@ -265,7 +265,6 @@ ul {
   height: 148px;
   align-items: center;
   justify-content: space-between;
-  margin: 0 200px;
 }
 .top-head .top-head__heading {
   color: #F16D7F;
@@ -273,6 +272,10 @@ ul {
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
+  margin-left: 200px;
+}
+.top-head .bread_crumbs {
+  margin-right: 200px;
 }
 .top-head .bread_crambs__link {
   color: #636363;
