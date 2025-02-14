@@ -306,7 +306,7 @@ ul {
   margin: 0 auto;
   z-index: 5;
   background-color: #FFFFFF;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #EAEAEA;
 }
 .Product_Description .Product_Description__collection_name {
   color: #F16D7F;
