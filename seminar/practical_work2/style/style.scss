@@ -1134,10 +1134,9 @@ $colorFontSort: #6F6E6E;
     &[open] .filter_summary {
         color: $colorSelectSite;
         margin: 13px 16px 16px;
-
-
-
     }
+
+
 
     &_conteiner {
         display: flex;
@@ -1161,18 +1160,15 @@ $colorFontSort: #6F6E6E;
     &__content {
         margin: 16px 13px 16px 13px;
 
-        color: $colorSelectSite;
-
-        &[open] {
+        &_item[open] .filter__content_category {
             color: $colorSelectSite;
-            margin: 13px 16px 16px;
         }
 
         &_category {
             display: flex;
             border-left: 4px solid $colorSelectSite;
             border-bottom: 1PX solid #EBEBEB;
-            color: $colorSelectSite;
+            color: $colorFontSort;
             list-style: none;
             padding-left: 10px;
             height: 37px;
@@ -1184,7 +1180,11 @@ $colorFontSort: #6F6E6E;
             margin: 10px;
 
 
+
         }
+
+
+
 
         .category_list {
             font-family: "Lato", serif;
@@ -1194,11 +1194,25 @@ $colorFontSort: #6F6E6E;
             color: #6F6E6E;
             padding-left: 10px;
             margin: 20px;
+            &:hover{
+                color: $colorSelectSite;
+            }
+
         }
     }
 
 
+
 }
+
+a {
+    &:hover {
+        color: $colorSelectSite;
+    }
+}
+
+
+
 
 
 

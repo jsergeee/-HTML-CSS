@@ -1018,17 +1018,15 @@ ul {
 }
 .filter__content {
   margin: 16px 13px 16px 13px;
-  color: #F16D7F;
 }
-.filter__content[open] {
+.filter__content_item[open] .filter__content_category {
   color: #F16D7F;
-  margin: 13px 16px 16px;
 }
 .filter__content_category {
   display: flex;
   border-left: 4px solid #F16D7F;
   border-bottom: 1PX solid #EBEBEB;
-  color: #F16D7F;
+  color: #6F6E6E;
   list-style: none;
   padding-left: 10px;
   height: 37px;
@@ -1047,6 +1045,13 @@ ul {
   color: #6F6E6E;
   padding-left: 10px;
   margin: 20px;
+}
+.filter__content .category_list:hover {
+  color: #F16D7F;
+}
+
+a:hover {
+  color: #F16D7F;
 }
 
 summary {
