@@ -1064,17 +1064,37 @@ input[type=checkbox] {
   margin-left: 5px;
 }
 
-.checkbox {
-  margin-left: 5px;
-}
-
 .sort {
   display: flex;
   top: 0px;
   position: absolute;
+  flex-wrap: wrap;
+}
+.sort_trending_sort {
+  width: 79px;
+  margin-right: 10px;
+}
+.sort_trending_sort[open] {
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px;
+}
+.sort_trending_sort_checkbox {
+  display: flex;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  margin: 10px 0px;
+  width: 79px;
+  display: flex;
+  align-items: center;
 }
 .sort_trending {
-  margin-left: 30px;
+  position: relative;
+  width: 140px;
+  margin-right: 10px;
 }
 .sort_trending[open] {
   background: #FFFFFF;

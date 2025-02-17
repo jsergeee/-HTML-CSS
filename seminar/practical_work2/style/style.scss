@@ -1226,20 +1226,47 @@ input[type="checkbox"] {
     margin-left: 5px;
 }
 
-.checkbox {
-    margin-left: 5px;
-}
+// .checkbox {
+//     margin-left: 5px;
+// }
 
 
 .sort {
     display: flex;
     top: 0px;
     position: absolute;
+    flex-wrap: wrap;
 
+    &_trending_sort {
+        width: 79px;
+        margin-right: 10px;
+
+
+        &[open] {
+                background: #FFFFFF;
+                box-shadow: 6px 4px 35px;
+            }
+        
+            &_checkbox {
+                display: flex;
+                font-family: "Lato", serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 14px;
+                line-height: 16.8px;
+                color: $colorFontSort;
+                margin: 10px 0px;
+                width: 79px;
+                display: flex;
+                align-items: center;
+            }
+    }
 
 
     &_trending {
-        margin-left: 30px;
+        position: relative;
+        width: 140px;
+        margin-right: 10px;
 
 
         &[open] {
