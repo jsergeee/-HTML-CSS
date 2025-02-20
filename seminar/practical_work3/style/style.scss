@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Обнуление основных элементов */
 body,
 h1,
@@ -10,134 +12,10 @@ ol {
   padding: 0;
   list-style: none;
   /* Убираем маркеры у списков */
-  font-family: "Lato Black";
 }
 
 $colorSelectSite: #f16d7f;
-$colorFontSort: #6f6e6e;
-
-.filter-sort {
-  display: flex;
-  position: relative;
-  z-index: 1;
-}
-
-.filter {
-  position: absolute;
-  box-sizing: border-box;
-  top: 39px;
-  width: 360px;
-
-  &[open] {
-    background: #ffffff;
-    box-shadow: 6px 4px 35px;
-  }
-
-  &[open] .filter_summary {
-    color: $colorSelectSite;
-    margin: 13px 16px 16px;
-  }
-
-  &_summary {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* Выравнивание элементов по центру по вертикали */
-    gap: 5px;
-  }
-
-  &__heading {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-  }
-
-  &__content {
-    margin: 16px 13px 16px 13px;
-
-    color: $colorSelectSite;
-
-    &[open] {
-      color: $colorSelectSite;
-      margin: 13px 16px 16px;
-    }
-
-    &_category {
-      display: flex;
-      border-left: 4px solid $colorSelectSite;
-      border-bottom: 1px solid #ebebeb;
-      color: $colorFontSort;
-      list-style: none;
-      padding-left: 10px;
-      height: 37px;
-      align-items: center;
-
-      font-weight: 400;
-      font-style: normal;
-      font-size: 24px;
-      margin: 10px;
-    }
-
-    .category_list {
-      font-weight: 400;
-      font-style: normal;
-      font-size: 24px;
-      color: #6f6e6e;
-      padding-left: 10px;
-      margin: 20px;
-    }
-  }
-}
-
-summary {
-  list-style: none;
-}
-
-input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-}
-
-.sort {
-  position: absolute;
-  display: flex;
-  margin-left: 500px;
-  top: 39px;
-
-  &_trending {
-    margin-left: 30px;
-
-    &[open] {
-      background: #ffffff;
-      box-shadow: 6px 4px 35px;
-    }
-
-    &_checkbox {
-      display: flex;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 24px;
-      line-height: 16.8px;
-      color: $colorFontSort;
-      margin: 10px 0px;
-      width: 79px;
-      display: flex;
-      align-items: center;
-    }
-
-    &_heading {
-      font-weight: 400;
-      font-style: normal;
-      font-size: 24px;
-      line-height: 16.8px;
-      color: $colorFontSort;
-    }
-  }
-}
-
-.filter-sort {
-  margin: 50px;
-}
+$colorFontHeading: #000000;
 
 a {
   text-decoration: none;
@@ -231,12 +109,12 @@ a {
 .offer {
   position: relative;
   display: flex;
-  z-index: 0;
-  align-content: 0;
+  z-index: 1;
+  align-content: center;
   margin: 20px;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: left;
+  justify-content: center;
   align-items: flex-start;
 
   .offer_item {
@@ -253,6 +131,7 @@ a {
 
   .product_prise {
     color: $colorSelectSite;
+    font-family: "Lato", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -263,11 +142,10 @@ a {
       text-decoration: none;
       /* Убираем подчеркивание */
       color: #000;
-      font-family: "o";
     }
 
     p {
-      font-family: "o";
+      font-family: "Lato", serif;
       font-weight: 300;
       font-style: normal;
       font-size: 14px;
@@ -323,16 +201,16 @@ a {
 }
 
 @font-face {
-  font-family: "o";
   font-display: swap;
+  font-family: "Lato";
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/lato-v24-latin-300.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "o";
   font-display: swap;
+  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/lato-v24-latin-regular.woff2") format("woff2");
@@ -365,6 +243,7 @@ html {
 }
 
 body {
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   min-width: 375px;
 }
@@ -388,9 +267,9 @@ ul {
 }
 
 .container {
-  max-width: 1400px;
-  padding-left: 30px;
-  padding-right: 30px;
+  max-width: 1140px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin: 0 auto;
 }
 
@@ -406,23 +285,31 @@ ul {
   background-color: #f8f3f4;
   height: 148px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 800px;
+
+  &_navigation {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 1140px;
+    justify-content: space-between;
+    gap: 700px;
+    margin: auto;
+    flex-wrap: nowrap;
+  }
 
   .top-head__heading {
     color: $colorSelectSite;
+    font-family: "Lato", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
-    margin-left: 200px;
-  }
-
-  .bread_crumbs {
-    margin-right: 200px;
   }
 
   .bread_crambs__link {
     color: #636363;
-
+    font-family: "Lato", serif;
     font-weight: 300px;
     font-style: normal;
     font-size: 16px;
@@ -437,7 +324,7 @@ ul {
 
   .bread_crambs__link_site {
     color: $colorSelectSite;
-
+    font-family: "Lato", serif;
     font-weight: 700px;
     font-style: normal;
     font-size: 16px;
@@ -456,7 +343,7 @@ ul {
 
   .Product_Description__collection_name {
     color: $colorSelectSite;
-
+    font-family: "Lato", serif;
     font-weight: 700px;
     font-style: normal;
     font-size: 16px;
@@ -471,6 +358,7 @@ ul {
   }
 
   .clollection_name_brend {
+    font-family: "Lato", serif;
     font-weight: 700px;
     font-style: normal;
     font-size: 16px;
@@ -482,7 +370,7 @@ ul {
     margin: 20px auto;
     text-align: center;
     width: 555px;
-
+    font-family: "Lato", serif;
     font-weight: 700px;
     font-style: normal;
     font-size: 16px;
@@ -493,7 +381,7 @@ ul {
     color: $colorSelectSite;
     text-align: center;
     width: 555px;
-
+    font-family: "Lato", serif;
     font-weight: 700px;
     font-style: normal;
     font-size: 16px;
@@ -514,6 +402,7 @@ ul {
   .choice {
     display: inline-block;
 
+    font-family: "Lato", serif;
     font-weight: 700px;
     font-style: normal;
     font-size: 16px;
@@ -810,9 +699,11 @@ ul {
 }
 
 .features {
+  position: relative;
   padding: 104px 0;
   background-color: #222224;
   color: #fbfbfb;
+  margin-top: 50px;
 }
 
 .features__list {
@@ -1157,3 +1048,475 @@ ul {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+$colorSelectSite: #f16d7f;
+$colorFontSort: #6f6e6e;
+
+.filter-sort {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+
+  &_conteiner {
+    display: flex;
+    position: absolute;
+    height: 17px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.filter {
+  box-sizing: border-box;
+  width: 360px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  &[open] {
+    background: #ffffff;
+    box-shadow: 6px 4px 35px;
+  }
+
+  &[open] .filter_summary {
+    color: $colorSelectSite;
+    margin: 13px 16px 16px;
+  }
+
+  &_conteiner {
+    display: flex;
+  }
+
+  &_summary {
+    gap: 5px;
+  }
+
+  &__heading {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  &__content {
+    margin: 16px 13px 16px 13px;
+
+    &_item[open] .filter__content_category {
+      color: $colorSelectSite;
+    }
+
+    &_category {
+      display: flex;
+      border-left: 4px solid $colorSelectSite;
+      border-bottom: 1px solid #ebebeb;
+      color: $colorFontSort;
+      list-style: none;
+      padding-left: 10px;
+      height: 37px;
+      align-items: center;
+      font-family: "Lato", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      margin: 10px;
+    }
+
+    .category_list {
+      font-family: "Lato", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      color: #6f6e6e;
+      padding-left: 10px;
+      margin: 20px;
+      &:hover {
+        color: $colorSelectSite;
+      }
+    }
+  }
+}
+
+a {
+  &:hover {
+    color: $colorSelectSite;
+  }
+}
+
+summary {
+  list-style: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+// .checkbox {
+//     margin-left: 5px;
+// }
+
+.sort {
+  display: flex;
+  top: 0px;
+  position: absolute;
+  flex-wrap: wrap;
+
+  &_trending_sort {
+    width: 79px;
+    margin-right: 10px;
+
+    &[open] {
+      background: #ffffff;
+      box-shadow: 6px 4px 35px;
+    }
+
+    &_checkbox {
+      display: flex;
+      font-family: "Lato", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16.8px;
+      color: $colorFontSort;
+      margin: 10px 0px;
+      width: 79px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &_trending {
+    position: relative;
+    width: 140px;
+    margin-right: 10px;
+
+    &[open] {
+      background: #ffffff;
+      box-shadow: 6px 4px 35px;
+    }
+
+    &_checkbox {
+      display: flex;
+      font-family: "Lato", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16.8px;
+      color: $colorFontSort;
+      margin: 10px 0px;
+      width: 79px;
+      display: flex;
+      align-items: center;
+    }
+
+    &_heading {
+      font-family: "Lato", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16.8px;
+      color: $colorFontSort;
+      margin-right: 15px;
+    }
+  }
+}
+
+.products {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  width: 1140px;
+  height: 1804px;
+  gap: 40px;
+
+  &_item {
+    height: 581px;
+    width: 360px;
+    background: #f8f8f8;
+
+    &_prise {
+      color: $colorSelectSite;
+      font-family: "Lato", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 16, 8px;
+      letter-spacing: 0%;
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+
+    &_heading {
+      font-family: "Lato", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 13px;
+      line-height: 16, 8px;
+      letter-spacing: 0%;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+
+    &_text {
+      color: $colorFontSort;
+      font-family: "Lato", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16, 8px;
+      letter-spacing: 0%;
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+
+    &_image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.pagination {
+  position: relative;
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+  border: 1px solid #ebebeb;
+  width: 384px;
+}
+
+.pagination .active a {
+  background-color: var(--bs-pagination-bg);
+  color: $colorSelectSite;
+}
+
+.page-link {
+  color: $colorFontSort;
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19.2px;
+  border: none;
+  margin: 5px;
+}
+
+.cart_prodoct_group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 1140px;
+  height: 1100px;
+  margin: auto;
+  gap: 20px;
+  justify-items: end;
+}
+
+.product_group {
+  position: relative;
+  display: flex;
+  width: 652px;
+  height: 306px;
+  box-shadow: 6px 4px 35px;
+
+  &_cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 18px;
+    height: 18px;
+
+    :hover {
+      img {
+        background: $colorSelectSite;
+      }
+    }
+  }
+
+  &_shipping_adress {
+    width: 360px;
+    height: 272px;
+    margin-left: 50px;
+
+    h3 {
+      font-family: "Lato", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    form {
+      margin-top: 10px;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%; /* Поля будут занимать 100% ширины контейнера */
+      max-width: 400px; /* Максимальная ширина полей */
+      height: 40px; /* Высота для полей ввода */
+      padding: 10px; /* Отступы внутри полей */
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px; /* Размер шрифта */
+    }
+    :hover {
+      color: $colorSelectSite;
+    }
+    button {
+      width: 101px;
+      height: 35px;
+      border: 1px solid #a4a4a4;
+      font-size: 11px; /* Размер шрифта */
+      color: #4a4a4a;
+      background-color: #ffffff;
+    }
+  }
+
+  &_text {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+
+    h3 {
+      font-family: "Lato", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 16, 8px;
+      width: 262px;
+      margin-top: 10px;
+    }
+  }
+
+  &_text_prise {
+    display: flex;
+
+    p {
+      color: $colorSelectSite;
+      margin-left: 5px;
+    }
+  }
+
+  &_text_color {
+    display: flex;
+    p {
+      margin-left: 5px;
+    }
+  }
+
+  &_text_sixe {
+    display: flex;
+    p {
+      margin-left: 5px;
+    }
+  }
+
+  &_text_quant {
+    display: flex;
+    margin-left: 5px;
+  }
+
+  &_parameter {
+    display: grid;
+    gap: 10px;
+    position: absolute;
+    top: 140px;
+  }
+
+  &_button_container {
+    display: flex;
+    width: 652px;
+    height: 50px;
+    gap: 150px;
+    justify-content: space-between;
+    color: #000000;
+
+    &_button_clear {
+      display: flex;
+      border: 1px solid #a4a4a4;
+      font-family: "Lato", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 14px;
+      height: 50px;
+      width: 235px;
+      justify-content: center;
+      align-items: center;
+      color: #000000;
+      a {
+        color: #000000;
+      }
+      a:hover {
+        color: $colorSelectSite;
+      }
+    }
+
+    &_button_continue {
+      display: flex;
+      border: 1px solid #a4a4a4;
+      font-family: "Lato", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 14px;
+      height: 50px;
+      width: 225;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: #000000;
+      }
+      a:hover {
+        color: $colorSelectSite;
+      }
+    }
+  }
+
+  &_total {
+
+    grid-template-columns: repeat(1 1 fr);
+    grid-template-rows: 4 1fr;
+    background-color: #f5f3f3;
+    width: 360px;
+    height: 240px;
+    justify-items: end;
+    
+
+    &_sub_total {
+      display: flex;
+      width: 108px;
+      height: 13px;
+      justify-content: space-around;
+      margin: 30px 20px;
+      p {
+        font-family: "Lato", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 11px;
+      }
+    }
+    &_grand_total {
+      display: flex;
+      width: 170px;
+      height: 19px;
+      justify-content: space-around;
+      font-family: "Lato", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 14px;
+    }
+    &_horisont_line {
+        border: 1px solid #E2E2E2;
+        width: 275px;
+        height: 1px;
+        margin: 20px auto;
+
+    }
+
+  }
+}
