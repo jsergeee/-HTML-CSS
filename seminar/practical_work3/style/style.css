@@ -1205,8 +1205,8 @@ input[type=checkbox] {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   width: 1140px;
-  height: 1100px;
-  margin: auto;
+  height: 800px;
+  margin: 100px auto;
   gap: 20px;
   justify-items: end;
 }
@@ -1314,6 +1314,7 @@ input[type=checkbox] {
   gap: 150px;
   justify-content: space-between;
   color: #000000;
+  margin-top: 50px;
 }
 .product_group_button_container_button_clear {
   display: flex;
@@ -1328,10 +1329,11 @@ input[type=checkbox] {
   align-items: center;
   color: #000000;
 }
-.product_group_button_container_button_clear a {
-  color: #000000;
+.product_group_button_container_button_clear:hover {
+  color: #f16d7f;
+  box-shadow: 6px 4px 35px;
 }
-.product_group_button_container_button_clear a:hover {
+.product_group_button_container_button_clear:hover a:hover {
   color: #f16d7f;
 }
 .product_group_button_container_button_continue {
@@ -1342,12 +1344,15 @@ input[type=checkbox] {
   font-style: normal;
   font-size: 14px;
   height: 50px;
-  width: 225;
+  width: 225px;
   justify-content: center;
   align-items: center;
-}
-.product_group_button_container_button_continue a {
   color: #000000;
+}
+.product_group_button_container_button_continue:hover {
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
+  box-shadow: 6px 4px 35px;
 }
 .product_group_button_container_button_continue a:hover {
   color: #f16d7f;
@@ -1382,10 +1387,32 @@ input[type=checkbox] {
   font-weight: 300;
   font-style: normal;
   font-size: 14px;
+  margin: 30px 20px;
 }
 .product_group_total_horisont_line {
-  border: 1px solid #E2E2E2;
+  border: 1px solid #e2e2e2;
   width: 275px;
   height: 1px;
   margin: 20px auto;
+}
+.product_group_total_button {
+  width: 273px;
+  height: 50px;
+  border: 1px solid #f16d7f;
+  background: #f16d7f;
+  align-content: center;
+  text-align: center;
+  margin: 10px auto;
+}
+.product_group_total_button p {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  color: white;
+}
+.product_group_total_button:hover {
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
+  box-shadow: 6px 4px 35px;
 }/*# sourceMappingURL=style.css.map */
