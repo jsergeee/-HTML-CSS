@@ -1421,73 +1421,101 @@ input[type=checkbox] {
   display: flex;
   width: 1140px;
   justify-content: space-between;
-  margin: auto;
+  margin: 100px auto;
   gap: 140px;
 }
 .registration_form {
-  margin-top: 0px;
+  margin-top: 0;
 }
-.registration_form_button {
+.registration_form a {
+  display: flex;
   width: 167px;
   height: 50px;
 }
+.registration_form a:hover {
+  box-shadow: 10px 4px 35px;
+}
 .registration_form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #f16d7f;
   width: 167px;
   height: 50px;
   border: none;
-}
-.registration_form button p {
-  font-family: "Lato", serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 14px;
   color: white;
 }
-.registration :hover.registration_form_button {
+.registration_form button:hover {
   box-shadow: 6px 4px 35px;
 }
 .registration input[type=text],
+.registration input[type=email],
+.registration input[type=password],
 .registration textarea {
-  width: 100%; /* Поля будут занимать 100% ширины контейнера */
   width: 360px; /* Максимальная ширина полей */
   height: 45px; /* Высота для полей ввода */
   padding: 10px; /* Отступы внутри полей */
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 0px;
-  font-size: 16px; /* Размер шрифта */
-}
-.registration label {
-  margin-bottom: 10px;
-}
-.registration_name_form {
-  margin-bottom: 10px;
-  font-family: "Lato", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 28.8px;
+  border-radius: 0;
+  font-size: 13px; /* Размер шрифта */
+  color: #b1b1b1;
 }
 .registration_form {
   width: 360px;
 }
+.registration_form_name_form {
+  margin-bottom: 20px;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19.2px;
+}
 .registration_form_checkbox_male_female {
   display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: 30px 0 30px 0px;
+}
+.registration_form_checkbox_male_female_male {
+  margin: auto 20px auto 10px;
 }
 .registration_form_checkbox_male_female_female {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .registration_inforation_advantage {
   width: 652px;
   height: 334px;
 }
-.registration p {
+
+label {
+  margin-bottom: 10px;
+}
+
+p {
   font-family: "Lato", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
   line-height: 28.8px;
+  margin-top: 5px;
+}
+
+.PasswordRequirements {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 15.6px;
+  margin-bottom: 40px;
+}
+
+.form-check-input {
+  margin: 4px 0px;
+  width: 17px;
+  height: 17px;
+  text-align: center;
 }
 
 .icon::before {
@@ -1497,7 +1525,7 @@ input[type=checkbox] {
   top: 50%; /* Центрирование по вертикали */
   transform: translateY(-50%); /* Центрирование по вертикали */
   width: 20px; /* Ширина иконки */
-  height: 20px; /* Высота иконки */
+  height: 16px; /* Высота иконки */
   background-image: url(/icon/check_mark.svg);
   background-size: contain; /* Масштабирование иконки */
   background-repeat: no-repeat; /* Без повторения */
@@ -1507,4 +1535,9 @@ input[type=checkbox] {
   position: relative;
   padding-left: 40px; /* Отступ для текста, чтобы не налезал на иконку */
   margin-bottom: 10px;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28.8px;
 }/*# sourceMappingURL=style.css.map */

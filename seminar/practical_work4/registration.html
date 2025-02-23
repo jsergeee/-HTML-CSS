@@ -48,14 +48,13 @@
 
     <div class="registration">
       <div class="registration_form">
-        <div class="registration_form_name_form"
-          style="margin-bottom: 10px;">Your Name</div>
+        <div class="registration_form_name_form">Your Name</div>
         <form action="#">
           <label for="First Name"></label>
-          <input type="text" id="country" placeholder="First Name">
+          <input type="text" id="Name" placeholder="First Name">
 
           <label for="Last Name"></label>
-          <input type="text" id placeholder="Last Name">
+          <input type="text" id="Last Name" placeholder="Last Name">
 
           <div class="registration_form_checkbox_male_female">
             <div class="input-group">
@@ -65,19 +64,37 @@
               </div>
             </div>
             <div class="registration_form_checkbox_male_female_male">Male</div>
-                        <div class="input-group">
+            <div class="input-group">
               <div class="input-group-text">
                 <input class="form-check-input mt-0" type="radio" value
                   aria-label="Radio button for following text input">
               </div>
             </div>
-            <div class="registration_form_checkbox_male_female_female">Female</div>
+            <div
+              class="registration_form_checkbox_male_female_female">Female</div>
 
           </div>
 
-          <a href="#"><div class="registration_form_button"><button style="margin-top: 20px; display: flex; align-items: center; justify-content: center;" type="submit"><p class="join_now">JOIN NOW</p><img style="width: 17px; height: 9.92px; margin-left: 15px;" src="/icon/arrow.svg" alt=""></button></div></a>
+          <div class="registration_form_name_form">Login details</div>
+
+          <input type="email" id="Email" placeholder="Email">
+
+          <label for="Password"></label>
+          <input type="password" id placeholder="Password">
+
+          <p class="PasswordRequirements">Please use 8 or more characters, with
+            at least 1 number and a mixture of uppercase and lowercase
+            letters</p>
+
+          <a href="#"><button
+              type="submit">JOIN NOW<img
+                style="width: 17px; height: 9.92px; margin-left: 15px;"
+                src="/icon/arrow.svg" alt></button></a>
+
         </form>
+
       </div>
+
       <div class="registrstion_inforation_advantage">
         <p style="margin-bottom: 15px;">LOYALTY HAS ITS PERKS</p>
         <p style="margin:0 40px 15px 0px;">Get in on the loyalty program where
