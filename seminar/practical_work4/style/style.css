@@ -264,7 +264,7 @@ ul {
   background-color: #f8f3f4;
   height: 148px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 800px;
 }
 .top-head_navigation {
@@ -277,7 +277,7 @@ ul {
   margin: auto;
   flex-wrap: nowrap;
 }
-.top-head .top-head__heading {
+.top-head__heading {
   color: #f16d7f;
   font-family: "Lato", serif;
   font-weight: 400;
@@ -904,6 +904,40 @@ ul {
     width: 100%;
     max-width: 356px;
   }
+  .top-head_navigation {
+    padding: 0 16px;
+    width: 100%;
+    max-width: 356px;
+  }
+  .registration {
+    display: flex;
+    max-width: 356px;
+    flex-wrap: wrap;
+    gap: 40px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  .registration_form {
+    padding: 0 5px;
+    max-width: 356px;
+  }
+  .registration_form_name_form {
+    width: 100%;
+    max-width: 356px;
+  }
+  .registrstion_inforation_advantage {
+    padding: 0 5px;
+    width: 100%;
+    max-width: 356px;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  textarea {
+    width: 358px !important; /* Максимальная ширина полей */
+    height: 45px; /* Высота для полей ввода */
+    padding: 10px; /* Отступы внутри полей */
+  }
 }
 @media (max-width: 740px) {
   .hero__container {
@@ -1240,9 +1274,6 @@ input[type=checkbox] {
   font-size: 16px;
   margin-top: 10px;
 }
-.product_group_shipping_adress form {
-  margin-top: 10px;
-}
 .product_group_shipping_adress input[type=text],
 .product_group_shipping_adress textarea {
   width: 100%; /* Поля будут занимать 100% ширины контейнера */
@@ -1426,6 +1457,9 @@ input[type=checkbox] {
 }
 .registration_form {
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 1140px;
 }
 .registration_form a {
   display: flex;
@@ -1447,6 +1481,10 @@ input[type=checkbox] {
 }
 .registration_form button:hover {
   box-shadow: 6px 4px 35px;
+}
+.registration_form_inforation_advantage {
+  width: 652px;
+  height: 334px;
 }
 .registration input[type=text],
 .registration input[type=email],
@@ -1487,6 +1525,10 @@ input[type=checkbox] {
 .registration_inforation_advantage {
   width: 652px;
   height: 334px;
+}
+
+.registrstion_inforation_advantage_header {
+  margin-bottom: 15px;
 }
 
 label {
@@ -1540,4 +1582,11 @@ p {
   font-style: normal;
   font-size: 24px;
   line-height: 28.8px;
+}
+
+.reg_form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px !important;
 }/*# sourceMappingURL=style.css.map */
