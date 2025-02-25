@@ -13,6 +13,11 @@ ol {
   list-style: none;
   /* Убираем маркеры у списков */
 }
+$super_small-screen: 380px;
+$small-screen: 576px;
+$medium-screen: 750px;
+$large-screen: 992px;
+$xlarge-screen: 1140px;
 
 $colorSelectSite: #f16d7f;
 $colorFontHeading: #000000;
@@ -358,13 +363,12 @@ ul {
 
   &_navigation {
     display: flex;
-    position: absolute;
     align-items: center;
     width: 1140px;
     justify-content: space-between;
-    gap: 700px;
     margin: auto;
     flex-wrap: nowrap;
+    padding: 10px;
   }
 
   &__heading {
@@ -939,7 +943,13 @@ ul {
   background-color: #f16d7f;
 }
 
-@media (max-width: 992px) {
+@media (min-width: $large-screen) and (max-width: $xlarge-screen) {
+  .container_regForm_totalInformation {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    margin: auto;
+  }
   .container {
     padding: 0 16px;
   }
@@ -1040,10 +1050,12 @@ ul {
   }
 }
 
-@media (max-width: 740px) {
-  .cart_prodoct_group {
-    display: flex !important;
-    flex-direction: column;
+@media (min-width: $medium-screen) and (max-width: $large-screen) {
+  .container_regForm_totalInformation {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    margin: auto;
   }
 
   .registration {
@@ -1164,13 +1176,29 @@ ul {
   }
 
   form {
-    width: 358px;
+    max-width: 358px;
     position: relative;
     left: 0px;
   }
 }
 
-@media (max-width: 540px) {
+@media (min-width: $small-screen) and (max-width: $medium-screen) {
+  .product_group_image1 {
+    min-width: 144px !important;
+  }
+  .product_group_image2 {
+    min-width: 144px !important;
+  }
+
+  .product_group {
+    max-width: 358px !important;
+  }
+  .container_regForm_totalInformation {
+    display: flex;
+    flex-wrap: wrap !important;
+    margin: auto;
+    justify-content: center;
+  }
   .offer {
     flex-wrap: wrap;
   }
@@ -1260,12 +1288,98 @@ ul {
   }
 
   form {
-    width: 358px;
+    max-width: 358px;
     position: relative;
     left: 0px;
   }
 }
 
+@media (max-width: $small-screen) {
+  .product_group_button_container {
+    gap: 10px !important;
+  }
+  .product_group {
+    max-width: 356px;
+  }
+  .container_regForm_totalInformation {
+    display: flex;
+    flex-wrap: wrap !important;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .product_group_image1 {
+    min-width: 144px !important;
+  }
+  .product_group_image2 {
+    min-width: 144px !important;
+  }
+}
+
+@media (max-width: $super_small-screen) {
+  .product_group_text {
+    max-width: 150px;
+  }
+
+  .product_group_button_container {
+    gap: 10px !important;
+  }
+
+  .product_group_button_container_button_clear {
+    min-width: 175px;
+  }
+
+  .product_group_button_container_button_continue {
+    min-width: 175px;
+  }
+
+  .product_group {
+    max-width: 356px !important;
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      h3 {
+        font-size: 16px !important;
+        max-width: 185px;
+      }
+
+      .product_group_text_prise {
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .product_group_text_color {
+        p {
+          font-size: 14px;
+        }
+      }
+      .product_group_text_size {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .product_group_text_quant {
+    form {
+      font-size: 14px !important;
+    }
+  }
+
+  .product_group_image1 {
+    min-width: 144px !important;
+    max-width: 144px;
+  }
+  .product_group_image2 {
+    min-width: 144px !important;
+    max-width: 144px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
 
 $colorSelectSite: #f16d7f;
@@ -1527,23 +1641,52 @@ input[type="checkbox"] {
   margin: 5px;
 }
 
+.cart {
+  display: flex;
+  max-width: 1140px;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container_regForm_totalInformation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
 .cart_prodoct_group {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1140px;
-  height: 800px;
-  margin: 100px auto;
-  gap: 20px;
+  gap: 30px;
   justify-items: end;
+  margin: auto;
 }
 
 .product_group {
   position: relative;
   display: flex;
-  max-width: 652px;
+  width: 652px;
   height: 306px;
   box-shadow: 6px 4px 35px;
+  margin: auto;
+
+  &_image1 {
+    width: 262px;
+    height: 306px;
+    background-image: url(/image/page1/Rectangle\ 15\ copy.png);
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Не повторяет изображение */
+    background-size: cover; /* Масштабирует изображение, чтобы покрыть весь контейнер */
+  }
+
+  &_image2 {
+    width: 262px;
+    height: 306px;
+    background-image: url(/image/page1/Image_item2.svg);
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Не повторяет изображение */
+    background-size: cover; /* Масштабирует изображение, чтобы покрыть весь контейнер */
+  }
 
   &_cross {
     position: absolute;
@@ -1562,30 +1705,29 @@ input[type="checkbox"] {
   &_shipping_adress {
     width: 360px;
     height: 272px;
-    margin-left: 50px;
+    margin-left: 20px;
 
     h3 {
       font-family: "Lato", serif;
       font-weight: 300;
       font-style: normal;
       font-size: 16px;
-      margin-top: 10px;
+      line-height: 19.2px;
+      margin: 10px auto 15px;
     }
 
     input[type="text"],
     textarea {
       width: 100%; /* Поля будут занимать 100% ширины контейнера */
       max-width: 400px; /* Максимальная ширина полей */
-      height: 40px; /* Высота для полей ввода */
+      height: 45px; /* Высота для полей ввода */
       padding: 10px; /* Отступы внутри полей */
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 16px; /* Размер шрифта */
     }
-    :hover {
-      color: $colorSelectSite;
-    }
+
     button {
       width: 101px;
       height: 35px;
@@ -1594,11 +1736,17 @@ input[type="checkbox"] {
       color: #4a4a4a;
       background-color: #ffffff;
     }
+
+    :hover button {
+      color: $colorSelectSite;
+      box-shadow: 6px 4px 35px;
+    }
   }
 
   &_text {
-    display: grid;
-    grid-template-columns: repeat(2 1fr);
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 
     h3 {
       font-family: "Lato", serif;
@@ -1609,46 +1757,73 @@ input[type="checkbox"] {
       width: 262px;
       margin-top: 10px;
     }
-  }
 
-  &_text_prise {
-    display: flex;
+    &_prise {
+      display: flex;
+      flex-wrap: nowrap;
 
-    p {
-      color: $colorSelectSite;
-      margin-left: 5px;
+      p {
+        color: $colorSelectSite;
+        margin-left: 5px;
+        font-family: "Lato", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 16, 8px;
+      }
     }
-  }
 
-  &_text_color {
-    display: flex;
-    p {
-      margin-left: 5px;
+    &_color {
+      display: flex;
+      flex-wrap: nowrap;
+      p {
+        margin-left: 5px;
+        font-family: "Lato", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 16, 8px;
+      }
     }
-  }
 
-  &_text_sixe {
-    display: flex;
-    p {
-      margin-left: 5px;
+    &_size {
+      display: flex;
+      flex-wrap: nowrap;
+      p {
+        margin-left: 5px;
+        font-family: "Lato", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 16, 8px;
+      }
     }
-  }
 
-  &_text_quant {
-    display: flex;
-    margin-left: 5px;
+    &_quant {
+      display: flex;
+      flex-wrap: nowrap;
+
+      form {
+        display: flex;
+        margin-left: 5px;
+        font-family: "Lato", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 16, 8px;
+      }
+    }
   }
 
   &_parameter {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    position: absolute;
-    top: 140px;
+    margin-top: 50px;
   }
 
   &_button_container {
     display: flex;
-    width: 652px;
     height: 50px;
     gap: 150px;
     justify-content: space-between;
@@ -1657,35 +1832,39 @@ input[type="checkbox"] {
 
     &_button_clear {
       display: flex;
+      text-wrap: nowrap;
       border: 1px solid #a4a4a4;
       font-family: "Lato", serif;
       font-weight: 300;
       font-style: normal;
       font-size: 14px;
       height: 50px;
-      width: 235px;
+      max-width: 30%;
+      min-width: 165px;
       justify-content: center;
       align-items: center;
       color: #000000;
-
       &:hover {
         color: $colorSelectSite;
+        border: 1px solid $colorSelectSite;
         box-shadow: 6px 4px 35px;
-        a:hover {
-          color: $colorSelectSite;
-        }
+      }
+      a:hover {
+        color: $colorSelectSite;
       }
     }
 
     &_button_continue {
       display: flex;
+      text-wrap: nowrap;
       border: 1px solid #a4a4a4;
       font-family: "Lato", serif;
       font-weight: 300;
       font-style: normal;
       font-size: 14px;
       height: 50px;
-      width: 225px;
+      width: 30%;
+      min-width: 165px;
       justify-content: center;
       align-items: center;
       color: #000000;
@@ -1701,36 +1880,45 @@ input[type="checkbox"] {
   }
 
   &_total {
-    grid-template-columns: repeat(1 1 fr);
-    grid-template-rows: 4 1fr;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     background-color: #f5f3f3;
     width: 360px;
     height: 240px;
     justify-items: end;
+    margin: 40px auto;
 
     &_sub_total {
+      position: relative;
       display: flex;
-      width: 108px;
-      height: 13px;
       justify-content: space-around;
       margin: 30px 20px;
+      justify-content: flex-end;
+
       p {
         font-family: "Lato", serif;
         font-weight: 300;
         font-style: normal;
         font-size: 11px;
+        margin-right: 20px;
       }
     }
     &_grand_total {
       display: flex;
-      width: 170px;
-      height: 19px;
-      justify-content: space-around;
       font-family: "Lato", serif;
       font-weight: 300;
       font-style: normal;
       font-size: 14px;
-      margin: 30px 20px;
+      margin: 10px 20px;
+      justify-content: flex-end;
+      p {
+        font-family: "Lato", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 16px;
+        margin-right: 20px;
+      }
     }
     &_horisont_line {
       border: 1px solid #e2e2e2;
