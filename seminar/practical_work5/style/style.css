@@ -980,6 +980,10 @@ ul {
   }
 }
 @media (max-width: 740px) {
+  .cart_prodoct_group {
+    display: flex !important;
+    flex-direction: column;
+  }
   .registration {
     display: flex;
     flex-wrap: nowrap !important;
@@ -1396,10 +1400,10 @@ input[type=checkbox] {
 }
 
 .cart_prodoct_group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  width: 1140px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
   height: 800px;
   margin: 100px auto;
   gap: 20px;
@@ -1409,7 +1413,7 @@ input[type=checkbox] {
 .product_group {
   position: relative;
   display: flex;
-  width: 652px;
+  max-width: 652px;
   height: 306px;
   box-shadow: 6px 4px 35px;
 }
