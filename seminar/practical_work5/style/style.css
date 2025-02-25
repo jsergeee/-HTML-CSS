@@ -720,6 +720,10 @@ ul {
   transition: all 0.3s;
 }
 
+:hover.goods__add-btn {
+  box-shadow: 6px 4px 35px;
+}
+
 .features {
   position: relative;
   padding: 104px 0;
