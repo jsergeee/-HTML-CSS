@@ -643,6 +643,7 @@ ul {
 
 .product__image-wrapper {
   position: relative;
+  min-width: 333px;
 }
 
 .product__image-wrapper:after {
@@ -934,6 +935,10 @@ ul {
     gap: 16px;
   }
   .goods__item {
+    min-width: 356px;
+    margin: auto;
+  }
+  .goods__item {
     flex: 1 1 calc(50% - 8px);
   }
   .features {
@@ -985,6 +990,12 @@ ul {
   }
 }
 @media (min-width: 750px) and (max-width: 992px) {
+  .sort {
+    left: 300px !important;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
   .container_regForm_totalInformation {
     display: flex;
     flex-direction: row !important;
@@ -1095,6 +1106,15 @@ ul {
   }
 }
 @media (min-width: 576px) and (max-width: 750px) {
+  .sort {
+    left: 200px !important;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .cart_prodoct_group {
+    min-width: 100%;
+  }
   .product_group_image1 {
     min-width: 144px !important;
   }
@@ -1102,7 +1122,7 @@ ul {
     min-width: 144px !important;
   }
   .product_group {
-    max-width: 358px !important;
+    max-width: 100%;
   }
   .container_regForm_totalInformation {
     display: flex;
@@ -1112,6 +1132,9 @@ ul {
   }
   .offer {
     flex-wrap: wrap;
+  }
+  .offer p {
+    font-size: 24px;
   }
   .offer_2 {
     max-width: 360px;
@@ -1192,12 +1215,36 @@ ul {
     left: 0px;
   }
 }
-@media (max-width: 576px) {
+@media (min-width: 20px) and (max-width: 576px) {
+  .sort {
+    left: 12px !important;
+  }
+  .products {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .cart_prodoct_group {
+    min-width: 100%;
+  }
+  .product_group_text H3 {
+    font-size: 16px !important;
+  }
+  .product_group_text_prise P {
+    font-size: 16px !important;
+  }
+  .product_group_text_color P {
+    font-size: 16px !important;
+  }
+  .product_group_text_size P {
+    font-size: 16px !important;
+  }
+  .product_group_text_quant form {
+    font-size: 16px !important;
+  }
   .product_group_button_container {
     gap: 10px !important;
   }
   .product_group {
-    max-width: 356px;
+    max-width: 100%;
   }
   .container_regForm_totalInformation {
     display: flex;
@@ -1211,61 +1258,26 @@ ul {
   .product_group_image2 {
     min-width: 144px !important;
   }
-}
-@media (max-width: 380px) {
-  .product_group_text {
-    max-width: 150px;
+  .offer {
+    flex-wrap: wrap;
   }
-  .product_group_button_container {
-    gap: 10px !important;
-  }
-  .product_group_button_container_button_clear {
-    min-width: 175px;
-  }
-  .product_group_button_container_button_continue {
-    min-width: 175px;
-  }
-  .product_group {
-    max-width: 356px !important;
-  }
-  .product_group_text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
-  .product_group_text h3 {
-    font-size: 16px !important;
-    max-width: 185px;
-  }
-  .product_group_text .product_group_text_prise p {
-    font-size: 14px;
-  }
-  .product_group_text .product_group_text_color p {
-    font-size: 14px;
-  }
-  .product_group_text .product_group_text_size p {
-    font-size: 14px;
-  }
-  .product_group_text_quant form {
-    font-size: 14px !important;
-  }
-  .product_group_image1 {
-    min-width: 144px !important;
-    max-width: 144px;
-  }
-  .product_group_image2 {
-    min-width: 144px !important;
-    max-width: 144px;
+  .goods__list {
+    flex-wrap: wrap;
   }
 }
 
 .filter-sort {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   position: relative;
   z-index: 1;
   height: 100px;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
 }
 .filter-sort_conteiner {
   display: flex;
@@ -1354,8 +1366,11 @@ input[type=checkbox] {
 .sort {
   display: flex;
   top: 0px;
+  left: 500px;
   position: absolute;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 380px;
+  justify-content: end;
 }
 .sort_trending_sort {
   width: 79px;
@@ -1380,7 +1395,6 @@ input[type=checkbox] {
 }
 .sort_trending {
   position: relative;
-  width: 140px;
   margin-right: 10px;
 }
 .sort_trending[open] {
@@ -1415,14 +1429,15 @@ input[type=checkbox] {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: auto;
-  width: 1140px;
-  height: 1804px;
+  max-width: 1140px;
+  width: 100%;
   gap: 40px;
 }
 .products_item {
-  height: 581px;
-  width: 360px;
+  display: flex;
+  flex-direction: column;
   background: #f8f8f8;
+  box-sizing: border-box;
 }
 .products_item_prise {
   color: #f16d7f;
@@ -1488,6 +1503,7 @@ input[type=checkbox] {
 }
 
 .cart {
+  position: relative;
   display: flex;
   max-width: 1140px;
   margin: auto;
