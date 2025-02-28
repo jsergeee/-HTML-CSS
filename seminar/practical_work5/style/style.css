@@ -970,6 +970,10 @@ ul {
 }
 
 @media (min-width: 992px) and (max-width: 1140px) {
+  .cart_prodoct_group {
+    min-width: 100%;
+    justify-content: center;
+  }
   .container_regForm_totalInformation {
     display: flex;
     flex-direction: row !important;
@@ -1052,14 +1056,12 @@ ul {
     width: 100%;
     max-width: 356px;
   }
-  .registration {
-    display: flex;
-    flex-wrap: nowrap !important;
-    gap: 40px !important;
-    margin-top: 50px !important;
-  }
 }
 @media (min-width: 750px) and (max-width: 992px) {
+  .cart_prodoct_group {
+    min-width: 100%;
+    justify-content: center;
+  }
   .sort {
     left: 300px !important;
   }
@@ -1073,10 +1075,15 @@ ul {
     margin: auto;
   }
   .registration {
-    display: flex;
-    flex-wrap: nowrap !important;
     gap: 40px !important;
     margin-top: 50px !important;
+    padding: 0px 10px 0px 10px;
+  }
+  .registration_inforation_advantage_header {
+    font-size: 16px !important;
+  }
+  .registration_information_advantage_description {
+    font-size: 16px !important;
   }
   .hero__container {
     min-height: 363px;
@@ -1184,15 +1191,18 @@ ul {
   }
   .cart_prodoct_group {
     min-width: 100%;
+    justify-content: center;
   }
   .product_group_image1 {
     min-width: 144px !important;
+    justify-content: center;
   }
   .product_group_image2 {
     min-width: 144px !important;
   }
   .product_group {
     max-width: 100%;
+    justify-content: center;
   }
   .container_regForm_totalInformation {
     display: flex;
@@ -1233,6 +1243,12 @@ ul {
     gap: 40px !important;
     margin-top: 50px !important;
     justify-content: space-around !important;
+  }
+  .registration_inforation_advantage_header {
+    font-size: 16px !important;
+  }
+  .registration_information_advantage_description {
+    font-size: 16px !important;
   }
   .registration_form {
     padding: 0 0px;
@@ -1294,6 +1310,7 @@ ul {
   }
   .cart_prodoct_group {
     min-width: 100%;
+    justify-content: center;
   }
   .product_group_text H3 {
     font-size: 16px !important;
@@ -1315,6 +1332,7 @@ ul {
   }
   .product_group {
     max-width: 100%;
+    justify-content: center;
   }
   .container_regForm_totalInformation {
     display: flex;
@@ -1334,6 +1352,22 @@ ul {
   .goods__list {
     flex-wrap: wrap;
   }
+  .registration {
+    display: flex;
+    flex-wrap: wrap !important;
+    gap: 40px !important;
+    margin-top: 50px !important;
+    justify-content: space-around !important;
+  }
+  .registration_inforation_advantage_header {
+    font-size: 16px !important;
+  }
+  .registration_information_advantage_description {
+    font-size: 16px !important;
+  }
+  .icon {
+    font-size: 16px !important;
+  }
 }
 
 .filter-sort {
@@ -1344,7 +1378,6 @@ ul {
   height: 100px;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   width: 100%;
   max-width: 1140px;
   margin: auto;
@@ -1579,6 +1612,7 @@ input[type=checkbox] {
   margin: auto;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .container_regForm_totalInformation {
@@ -1742,7 +1776,7 @@ input[type=checkbox] {
   gap: 150px;
   justify-content: space-between;
   color: #000000;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 .product_group_button_container_button_clear {
   display: flex;
@@ -1864,6 +1898,7 @@ input[type=checkbox] {
   margin: 100px auto;
   gap: 140px;
   max-width: 1140px;
+  flex-wrap: nowrap;
 }
 .registration_form {
   margin-top: 0;
@@ -1939,13 +1974,25 @@ input[type=checkbox] {
   height: 334px;
 }
 
-.registration_information_advantage_header {
-  margin-bottom: 20px;
+.registration_information_advantage_description {
+  display: flex;
+  width: 100%;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 19.2px;
+  margin: 30px auto 30px;
 }
 
-.registration_information_advantage_description {
-  margin-bottom: 20px;
+.registration_inforation_advantage_header {
   display: flex;
+  width: 100%;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 19.2px;
 }
 
 .registration_information_advantage_header_container {
