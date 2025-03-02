@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import url(normalyzation.css);
+.container {
+  display: flex;
+}
+
+.item {
+  flex-grow: 1; /* Все элементы будут расти одинаково */
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px solid #000;
+}
+
+.item1 {
+  flex-grow: 1; /* Занимает 1 часть доступного пространства */
+}
+
+.item2 {
+  flex-grow: 3; /* Занимает 2 части доступного пространства */
+}
+
+.item3 {
+  flex-grow: 1; /* Занимает 1 часть доступного пространства */
+}
+
+.container_2 {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+  width: 100%; /* Ширина контейнера */
+  margin-top: 100px;
+  border: 1px solid;
+}
+
+.three-to-one {
+  flex: 1 0 33.33%; /* Каждый элемент занимает 1/3 ширины контейнера */
+  padding: 10px; /* Отступы для визуального эффекта */
+  border: 1px solid;
+  text-align: center;
+}
+
+.full-width {
+  flex: 1 0 100%; /* Элемент занимает всю ширину контейнера */
+  border: 1px solid;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
